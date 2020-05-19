@@ -1,0 +1,28 @@
+
+<div class="card animated fadeIn fast" >
+    <img [src]="food.img" class="card-img-top" alt="...">
+      <!-- <div class="card-block"> -->
+      <div class="card-body">
+          <h5 class="card-title">  {{ food.nombre  }}         </h5>
+          <p class="card-text">    {{ food.description  }}    </p>
+          
+          <p class="card-text"><small class="text-muted">  {{  food.price  | currency:'EUR'  }}  </small></p>      
+         
+          <!-- con codebehind
+         
+          (click)="verHeroDetail(heroe.nombre)"       
+          
+          -->
+
+          <button 
+          (click)="verFoodEvent()"
+         
+          type="button" class="btn btn-outline-primary btn-block"> Ver más..</button>
+          
+          
+          <!-- Forma con routerLink -->
+          <!-- [routerLink]="['heroe',i]" Hacce append en ruta actual -->
+          <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más Link..</a> -->
+
+      </div>
+  </div>

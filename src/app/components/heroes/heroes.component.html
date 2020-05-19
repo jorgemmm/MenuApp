@@ -1,19 +1,33 @@
-<h1>Héroes de  <small>marvel y DC</small> </h1>
+  <!-- <h1>Héroes de  <small>marvel y DC</small> </h1>
 
-<div class="card-columns">
-    
+<div class="card-columns">   
 
-    <!-- btn-block -->
-    <!-- (heroeSeleccionado)="verHeroe( $event )" recibe $event del componente hijo
-    [heroe]="myhero"  [index]="i"  manda a componentes hijos 
   
-  -->
-    <app-heroe-card   
+
+
+  <app-heroe-card   
            (heroeSeleccionado)="verHeroe( $event )" 
            [heroe]="myhero"  [index]="i"  
-           *ngFor="let myhero of heroes, let i=index"> </app-heroe-card>
-
-
+           *ngFor="let myhero of heroes, let i=index">
+           </app-heroe-card> 
+          
     
 
   </div>
+-->
+
+
+  <h1>Carta de  <small>Precios y Ofertas</small> </h1>
+
+  <div class="card-columns"> 
+
+    <app-food-card 
+    [food]="myFood"    
+    (foodSeleccionado)="verFood( $event )" 
+    [index]="i"  
+    *ngFor="let myFood of feet, let i=index"
+    >
+
+    </app-food-card>
+
+</div>

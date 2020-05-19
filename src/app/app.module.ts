@@ -9,7 +9,7 @@ import { HeroesService }  from './services/heroes.service';
 
 //Rutas
 import { AppRoutingModule } from  './app-routing.module';
-
+import { FoodService } from './services/food.service';
 
 //Componentes
 import { AppComponent } from      './app.component';
@@ -20,7 +20,11 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HeroeDetailComponent } from './components/heroe-detail/heroe-detail.component';
 import { SearchComponent } from './components/search/search.component';
-import { HeroeCardComponent } from './components/heroe-card/heroe-card.component'
+import { HeroeCardComponent } from './components/cards/heroe-card/heroe-card.component';
+
+import { GameCardComponent } from './components/cards/game-card/game-card.component';
+import { FoodCardComponent } from './components/cards/food-card/food-card.component';
+
 
 @NgModule({
   declarations: [
@@ -32,14 +36,18 @@ import { HeroeCardComponent } from './components/heroe-card/heroe-card.component
     FooterComponent,
     HeroeDetailComponent,
     SearchComponent,
-    HeroeCardComponent
+    HeroeCardComponent,
+    GameCardComponent,
+    FoodCardComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    HeroesService
+    HeroesService,
+    FoodService
 
   ],
   bootstrap: [AppComponent]

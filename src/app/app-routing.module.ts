@@ -38,7 +38,9 @@ const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'heroes', component: HeroesComponent },
+  { path: 'feet', component: HeroesComponent },
   { path: 'heroe/:id', component: HeroeDetailComponent },
+  { path: 'food/:id', component: HeroeDetailComponent },
   { path: 'search/:termino', component: SearchComponent },
   { path: '**', component: HomeComponent },
 ];

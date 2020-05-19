@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router'
 
-import { HeroesService,Heroe } from '../../services/heroes.service';
-
+import { HeroesService, Heroe }     from '../../services/heroes.service';
+import { FoodService,  Food }         from '../../services/food.service';
 
 const CASA_DC:string="DC";
 const CASA_MARVEL:string="Marvel";
@@ -16,7 +16,14 @@ export class HeroeDetailComponent implements OnInit {
 
   DC:boolean=false;
 
-  
+  food:Food={
+    nombre: "American Burger style",
+    category:"FastFood",
+    description: "La clásica Hamburguesa Americana, para comersela a 2 manos",
+    img: "assets/img/food/burger.jpg",
+    price: "5"
+    
+  }
 
   heroe:Heroe = {
       nombre: "Aquaman",
@@ -27,7 +34,9 @@ export class HeroeDetailComponent implements OnInit {
   };
 
   constructor( private _activateRoute:ActivatedRoute,
-              private _heroeService:HeroesService) {
+              private _heroeService:HeroesService,
+              private _foodService:FoodService
+              ) {
     this._activateRoute.params.subscribe( params_in =>{
               
               // console.log(params_in);             
@@ -48,6 +57,8 @@ export class HeroeDetailComponent implements OnInit {
               }
               console.log(this.DC);
 
+              this.food = this._foodService.getFood(params_in['id']);
+              console.log(this.food);
           });
    }
 
