@@ -42,12 +42,13 @@ const APP_ROUTES: Routes = [
   { path: 'heroe/:id', component: HeroeDetailComponent },
   { path: 'food/:id', component: HeroeDetailComponent },
   { path: 'search/:termino', component: SearchComponent },
-  { path: '**', component: HomeComponent },
+   {path:'**', pathMatch:'full', redirectTo:'home' },
+  //{ path: '**', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(APP_ROUTES, 
-    //{ useHash:true} 
+    { useHash:true} 
     )],
   exports: [RouterModule]
 })
