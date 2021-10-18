@@ -1,8 +1,8 @@
 # Getting Starter 
 
 After donload or clone project
-npm install
-nmp start
+<p>npm install</p>
+npm start
 
 # Spa
 
